@@ -1,4 +1,6 @@
 package example.liskov;
+
+import java.awt.Graphics;
 import java.awt.Point;
 
 public class Triangulo implements FormaGeometrica {
@@ -12,6 +14,10 @@ public class Triangulo implements FormaGeometrica {
 		this.v3 = v3;
 	}
 
+	public void desenhar(Graphics g) {
+		g.fillPolygon(getXs(), getYs(), 3);
+	}
+	
 	public int[] getXs() {
 		return new int[] { (int) v1.getX(), (int) v2.getX(), (int) v3.getX() };
 	}
@@ -19,5 +25,4 @@ public class Triangulo implements FormaGeometrica {
 	public int[] getYs() {
 		return new int[] { (int) v1.getY(), (int) v2.getY(), (int) v3.getY() };
 	}
-
 }

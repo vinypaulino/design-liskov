@@ -1,5 +1,7 @@
 package example.liskov;
 
+import java.awt.Graphics;
+
 public class Circulo implements FormaGeometrica {
 	private int x;
 	private int y;
@@ -9,6 +11,10 @@ public class Circulo implements FormaGeometrica {
 		this.x = x;
 		this.y = y;
 		this.raio = raio;
+	}
+	
+	public void desenhar(Graphics graphics) {
+		graphics.fillOval(x, y, raio, raio);
 	}
 
 	public int getX() {
@@ -34,4 +40,5 @@ public class Circulo implements FormaGeometrica {
 	public void setRaio(int raio) {
 		this.raio = raio;
 	}
+
 }

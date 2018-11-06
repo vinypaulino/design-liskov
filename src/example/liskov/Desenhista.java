@@ -1,5 +1,4 @@
 package example.liskov;
-
 import java.awt.Graphics;
 
 public class Desenhista {

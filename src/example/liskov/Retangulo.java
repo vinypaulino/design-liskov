@@ -1,5 +1,7 @@
 package example.liskov;
 
+import java.awt.Graphics;
+
 public class Retangulo implements FormaGeometrica {
 	private int x, y, largura, altura;
 
@@ -8,6 +10,10 @@ public class Retangulo implements FormaGeometrica {
 		this.y = y;
 		this.largura = largura;
 		this.altura = altura;
+	}
+
+	public void desenhar(Graphics graphics) {
+		graphics.fillRect(x, y, largura, altura);
 	}
 
 	public int getX() {
